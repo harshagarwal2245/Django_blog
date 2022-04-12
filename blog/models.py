@@ -25,6 +25,7 @@ class Post(models.Model):
     publish = models.DateTimeField(default=timezone.now,verbose_name="Publish")
     created = models.DateTimeField(auto_now_add=True,verbose_name="Created")
     updated = models.DateTimeField(auto_now=True,verbose_name="Updated")
+    snippet = models.CharField(max_length=250,verbose_name="Snippet",)
 
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')
 
