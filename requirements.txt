@@ -3,3 +3,5 @@ django
 djangorestframework
 pillow
 markdown
+django-ckeditor
+django-taggit

@@ -9,7 +9,7 @@
  <p class="date">
  Published {{ post.publish }} by {{ post.author }}
  </p>
- {{ post.body|markdown }}
+ {{ post.body|markdown|safe }}
 
 {% if request.user.is_staff or request.user.is_superuser %}
 <a href='{% url "blog:post_delete" post.id %}'>
