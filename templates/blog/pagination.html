@@ -1,0 +1,20 @@
+<div class="pagination">
+<ul >
+ {% if page.has_previous %}
+ <li >
+ <a  href="?page={{ page.previous_page_number }}">
+<span >&laquo;</span>
+</a>
+</li>
+ {% endif %}
+ {% for i in page.paginator.page_range %}
+	<li ><a  href="?page={{ i }}">{{ i }}</a>
+</li>
+{% endfor %}
+ {% if page.has_next %}
+ <li ><a  href="?page={{ page.next_page_number }}">&raquo;</a>
+</li>
+ {% endif %}
+
+</ul>
+</div>

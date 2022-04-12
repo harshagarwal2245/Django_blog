@@ -1,0 +1,6 @@
+{% extends "blog\base.html" %}
+    
+    {% block content %}
+        <h1>You had successfull deleted {{ post.title }}.</h1>
+        <a href="{% url 'blog:post__list' %}">main page</a>
+    {% endblock %}

@@ -1,0 +1,240 @@
+body { 
+    margin:0;
+    padding:0;
+    font-family:helvetica, sans-serif; 
+}
+
+a { 
+    color:#00abff;
+    text-decoration:none; 
+}
+
+h1 { 
+    font-weight:normal;
+    border-bottom:1px solid #bbb;
+    padding:0 0 10px 0;
+}
+
+h2 {
+    font-weight:normal;
+    margin:30px 0 0;
+}
+
+#content { 
+    float:left;
+    width:60%;
+    padding:0 0 0 30px; 
+}
+
+#sidebar { 
+    float:right;
+    width:30%;
+    padding:10px;
+    background:#1f5ca2; 
+    height:100%;
+    color:#fbfbfb
+}
+
+/* pagination */
+.pagination ul{
+    padding:10px 0;
+    text-align:center;
+}
+.pagination  li{ 
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin:0;
+}
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+p.date { 
+    color:#ccc;
+    font-family: georgia, serif;
+    font-size: 12px;
+    font-style: italic; 
+}
+
+#header {
+    padding:10px 100px;
+    font-size:16px;
+    background-color:#101112;
+    color:rgb(232, 220, 220);
+    border-bottom:4px solid #38383e;
+    overflow:auto;
+    
+    
+}
+
+#header a, text {
+    color:rgb(232, 220, 220);
+}
+#header .user{
+    color:rgb(232, 220, 220);
+    float:right;
+    
+}
+
+#header ul.menu{
+    float: left;
+    margin:0;
+    padding:0;
+    list-style: none;
+    
+}
+
+#header ul.menu li{
+    float:left;
+    padding:4px 10px 0px 0px;
+    
+}
+
+#header ul.menu li a {
+    display: block;
+    color: white;
+    text-align: left;
+    text-decoration: none;
+    float:center;
+    
+  }
+
+#header a{
+    color:white;
+}
+
+#header .brand{
+    color:rgb(250, 250, 250);
+    font-size: 20px;
+    margin-right: 5%;
+    float:left;
+    
+}
+#header .open-button{
+   background-color: #101112;
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  
+}
+
+/*.navbar-custom {
+    background-color: #101112;
+    padding: 10px 100px;
+    font-size:14px;
+    position:fixed;
+
+}
+ Modify brand and text color 
+ 
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color:rgb(250, 250, 250);
+}
+.navbar-custom .ul.menu{
+    position:sticky;
+    list-style:none;
+    float:left;
+    margin:0;
+    padding:0;
+}
+
+.navbar-custom .ul.menu .li {
+    float:left;
+    padding:4px 10px;
+}
+
+
+
+.navbar-custom .a {
+    color:#f3f7cc;
+}
+.navbar-custom .a:hover {
+    color:#fff;
+}
+
+.navbar-custom .user {
+    float:right;
+    padding-top:4px;
+}  */
+
+/* login popup*/
+* {
+    box-sizing: border-box;
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+
+
+/* The popup form - hidden by default */
+
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #6d6d70;
+  color: rgb(10, 10, 10);
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: rgb(41, 60, 98);
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+/* The comment box */
+#add_review{
+  cursor:pointer;
+}
+
+.hidden{display: none;}
+
+.visible{display: block;}
+
+.new_review{
+  background-color: pink;
+  }
