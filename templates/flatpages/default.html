@@ -1,0 +1,13 @@
+{% extends "blog/base.html" %}
+
+{% block title %} 
+  {{ flatpage.title}} - {{ site_name}}
+{% endblock %}
+
+{% block content %}
+  <div>
+      <h1>{{ flatpage.title }}</h1>
+        <p>{{ flatpage.content}}</p>
+      
+  </div>
+{% endblock %}
