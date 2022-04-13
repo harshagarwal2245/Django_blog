@@ -8,6 +8,7 @@ from django.utils.text import slugify
 from django.contrib import messages
 from taggit.models import Tag
 from django.db.models import Count
+from django.contrib.flatpages.models import FlatPage
 #new try:
 
 
@@ -118,3 +119,5 @@ def update_post(request,post_id):
         else:
             form=PostAddForm(instance=post)
         return render(request,'blog/post/update.html',{'form':form})
+
+
