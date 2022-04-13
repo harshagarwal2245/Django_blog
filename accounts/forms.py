@@ -9,7 +9,7 @@ class LoginForm(forms.Form):
 
 
 class RegisterForm(forms.ModelForm):
-    username = forms.CharField(label='Username', max_length=100)
+    username = forms.CharField(label='Username', max_length=100,)
     email = forms.EmailField(label='Email')
     password = forms.CharField(label='Password', widget=forms.PasswordInput,max_length=16, min_length=8)
     password_confirm = forms.CharField(label='Confirm Password', widget=forms.PasswordInput,max_length=16, min_length=8)

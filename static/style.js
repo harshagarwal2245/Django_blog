@@ -33,3 +33,7 @@ jQuery("#comment_form").addClass('hidden');
 jQuery("#add_comment").click(slideToggleCommentForm);
 jQuery("#add_comment").addClass('visible');
 jQuery("#cancel_comment").click(slideToggleCommentForm);
+
+$('.message a').click(function(){
+  $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});

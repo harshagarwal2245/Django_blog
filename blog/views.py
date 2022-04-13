@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Post
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from .forms import EmailPostForm,PostAddForm,CommentForm
+from .forms import EmailPostForm,PostAddForm,CommentForm,SearchForm
 from django.core.mail import send_mail
 from django.contrib.auth.decorators import login_required,user_passes_test
 from django.utils.text import slugify
