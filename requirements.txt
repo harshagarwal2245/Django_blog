@@ -7,4 +7,4 @@ django-ckeditor
 django-taggit
 gunicorn
 python-decouple
-flakes8
+flake8
