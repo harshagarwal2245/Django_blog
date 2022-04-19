@@ -30,7 +30,7 @@ SECRET_KEY = '55n8y7w9w#y)7#ko%h2kars0g*foq7#y3fr@m-2f4kur6hygft'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*','django-blog-12.herokuapp.com']
+ALLOWED_HOSTS = ['*','django-blog-12.herokuapp.com','127.0.0.1','mysite.com']
 
 SITE_ID = 1
 
@@ -45,12 +45,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
     'accounts.apps.AccountsConfig',
-
+    
+    'social_django',
     'taggit',
     'ckeditor',
     'django.contrib.sites',
     'django.contrib.sitemaps',
     'django.contrib.flatpages',
+    'django_extensions',
 
 ]
 
@@ -72,6 +74,7 @@ MIDDLEWARE = [
 AUTHENTICATION_BACKENDS = [
  'django.contrib.auth.backends.ModelBackend',
  'accounts.authentication.EmailAuthBackend',
+ 'social_core.backends.google.GoogleOAuth2',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -161,3 +164,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
 django_heroku.settings(locals())
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY="716423341164-ulup40d5sckjndg7gl4ro3nb6iqen1og.apps.googleusercontent.com"
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET="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"

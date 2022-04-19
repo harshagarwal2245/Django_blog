@@ -11,3 +11,6 @@ flake8
 whitenoise
 django-heroku
 dj-database-url
+social-auth-app-django==3.1.0
+werkzeug==0.16.0
+pyOpenSSL==19.0.0
