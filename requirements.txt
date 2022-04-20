@@ -1,5 +1,5 @@
 pre-commit
-django
+django==3.1
 djangorestframework
 pillow
 markdown

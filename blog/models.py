@@ -26,7 +26,7 @@ class Post(models.Model):
     created = models.DateTimeField(auto_now_add=True,verbose_name="Created")
     updated = models.DateTimeField(auto_now=True,verbose_name="Updated")
     snippet = models.CharField(max_length=250,verbose_name="Snippet",)
-
+    header = models.ImageField(blank=True,null=True,upload_to='blog/%Y/%m/%d',verbose_name="Header")
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')
 
 

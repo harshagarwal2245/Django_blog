@@ -11,7 +11,7 @@ class EmailPostForm(forms.Form):
 class PostAddForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ('title','body','snippet','status')
+        fields = ('title','body','snippet','header','status',)
 
 class CommentForm(forms.ModelForm):
     class Meta:

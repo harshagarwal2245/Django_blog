@@ -24,7 +24,7 @@
     <p class="date">
     Published {{ post.publish }} by {{ post.author }}
     </p>
-    {{ post.body|truncatewords:30|linebreaks }}
+    {{ post.body|truncatewords:30|linebreaks|safe }}
     <p>
        <a href='{% url "blog:post_share" post.id %}'>
            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">

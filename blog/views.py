@@ -86,6 +86,7 @@ def AddPost(request):
             post=form.save(commit=False)
             post.author=request.user
             post.slug=slugify(form.cleaned_data['title'])
+            print(form.cleaned_data["header"])
             if is_journalist(request.user):
                 post.save()
                 return render(request,'blog/post/post_added.html',{'post':post})
