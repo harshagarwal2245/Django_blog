@@ -1,10 +1,10 @@
 {% extends "blog/base.html" %}
-{% block title %}Create an account{% endblock %}
+{% block title %}Create an post{% endblock %}
 {% block content %}
  <h1>Create an Blog</h1>
  <p>Please, Add Post using the following form:</p>
  <form method="post" enctype="multipart/form-data">
-{{ form.media }}
+  {{ form.media }}
  {{ form.as_p }}
  {% csrf_token %}
  <p><input type="submit" value="Create blog"></p>

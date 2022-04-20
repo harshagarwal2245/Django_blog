@@ -28,7 +28,7 @@ class Post(models.Model):
     snippet = models.CharField(max_length=250,verbose_name="Snippet",)
     header = models.ImageField(blank=True,null=True,upload_to='blog/%Y/%m/%d',verbose_name="Header")
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')
-
+    users_like=models.ManyToManyField(User,related_name='post_likes',blank=True)
 
     class Meta:
         ordering = ('-publish',)

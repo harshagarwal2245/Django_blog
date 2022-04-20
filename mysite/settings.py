@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'django.contrib.flatpages',
     'django_extensions',
+    'easy_thumbnails',
 
 ]
 
