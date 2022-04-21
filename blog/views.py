@@ -81,7 +81,7 @@ def is_journalist(user):
 
 def AddPost(request):
     if request.method=='POST':
-        form=PostAddForm(request.POST)
+        form=PostAddForm(request.POST,request.FILES)
         if form.is_valid():
             post=form.save(commit=False)
             post.author=request.user
