@@ -81,7 +81,7 @@ def is_journalist(user):
 
 def AddPost(request):
     if request.method=='POST':
-        form=PostAddForm(request.POST)
+        form=PostAddForm(request.POST,request.FILES)
         if form.is_valid():
             post=form.save(commit=False)
             post.author=request.user
@@ -110,7 +110,7 @@ def update_post(request,post_id):
     post=get_object_or_404(Post,id=post_id)
     if is_journalist(request.user):
         if request.method=='POST':
-            form=PostAddForm(request.POST,instance=post)
+            form=PostAddForm(request.POST,instance=post,files=request.FILES)
             if form.is_valid():
                 post=form.save(commit=False)
                 post.author=request.user

@@ -9,6 +9,11 @@
  <p class="date">
  Published {{ post.publish }} by {{ post.author }}
  </p>
+ {% load thumbnail %}
+ <a href="{{ post.header.url }}"> 
+   <img src="{% thumbnail post.header 300x0 quality=100 %}" class="image-detail"  alt=post.title >
+ </a>
+
  {{ post.body|markdown|safe }}
 
 {% if request.user.is_staff or request.user.is_superuser %}
