@@ -14,4 +14,5 @@ urlpatterns = [
     path('<int:post_id>/update/',views.update_post, name='post_update'),
     path('tag/<slug:tag_slug>/', views.post_list, name='post_list_by_tag'),
     path('feed/', LatestPostsFeed(), name='post_feed'),
+    path('like/', views.post_like, name='post_like'),
 ] 

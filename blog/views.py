@@ -9,6 +9,8 @@ from django.contrib import messages
 from taggit.models import Tag
 from django.db.models import Count
 from django.contrib.flatpages.models import FlatPage
+from django.http import JsonResponse
+from django.views.decorators.http import require_POST
 #new try:
 
 
@@ -122,3 +124,21 @@ def update_post(request,post_id):
         return render(request,'blog/post/update.html',{'form':form})
 
 
+@login_required
+@require_POST
+def post_like(request):
+    """ Function used to like the post and maintain the record of it"""
+    post_id=request.POST.get('id')
+    action=request.POST.get('action')
+    print(post_id,action)
+    if post_id and action:
+        try:
+            post=Post.objects.get(id=post_id)
+            if action=='like':
+                post.users_like.add(request.user)
+            else:
+                post.users_like.remove(request.user)
+            return JsonResponse({'status':'ok'})
+        except:
+            pass
+    return JsonResponse({'status':'error'})

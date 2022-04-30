@@ -153,8 +153,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, '/')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 LOGIN_REDIRECT_URL = 'dashboard'
@@ -165,5 +165,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
 django_heroku.settings(locals())
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY="716423341164-ulup40d5sckjndg7gl4ro3nb6iqen1og.apps.googleusercontent.com"
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET="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"
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY=config('SOCIAL_AUTH_GOOGLE_OAUTH2_KEY')
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET=config('SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET')
